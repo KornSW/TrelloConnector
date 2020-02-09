@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E9D1A9C-BF67-4A30-B2C4-406EE606C314}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TrelloConnector</RootNamespace>
+    <AssemblyName>KSW.TrelloConnector</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\%28Stage%29\Bin\</OutputPath>
+    <DocumentationFile>KSW.TrelloConnector.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\%28Stage%29\Bin\</OutputPath>
+    <DocumentationFile>KSW.TrelloConnector.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\(Vendor)\NuGet\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FluentAccess\Boards\IAlloverBoardAccess.vb" />
+    <Compile Include="FluentAccess\Boards\IBoardContainerAccessContext.vb" />
+    <Compile Include="FluentAccess\Boards\IBoardsAccessContext.vb" />
+    <Compile Include="FluentAccess\Boards\IBoardAccessContext.vb" />
+    <Compile Include="FluentAccess\Cards\AlloverCardQuery.vb" />
+    <Compile Include="FluentAccess\Cards\IAlloverCardAccess.vb" />
+    <Compile Include="FluentAccess\Labels\AlloverLabelQuery.vb" />
+    <Compile Include="FluentAccess\Labels\IAlloverLabelAccess.vb" />
+    <Compile Include="FluentAccess\Lists\IAlloverListAccess.vb" />
+    <Compile Include="FluentAccess\Lists\IListContainerAccessContext.vb" />
+    <Compile Include="FluentAccess\Lists\IListsAccessContext.vb" />
+    <Compile Include="FluentAccess\Lists\IListAccessContext.vb" />
+    <Compile Include="FluentAccess\Cards\ICardContainerAccessContext.vb" />
+    <Compile Include="FluentAccess\Cards\ICardsAccessContext.vb" />
+    <Compile Include="FluentAccess\Cards\ICardAccessContext.vb" />
+    <Compile Include="FluentAccess\Labels\ILabelContainerAccessContext.vb" />
+    <Compile Include="FluentAccess\Labels\ILabelsAccessContext.vb" />
+    <Compile Include="FluentAccess\Labels\ILabelAccessContext.vb" />
+    <Compile Include="FluentAccess\Lists\AlloverListQuery.vb" />
+    <Compile Include="FluentAccess\Members\IAlloverMemberAccess.vb" />
+    <Compile Include="FluentAccess\Members\IMembersAccessContext.vb" />
+    <Compile Include="FluentAccess\Members\IMemberAccessContext.vb" />
+    <Compile Include="FluentAccess\Cards\CardQuery.vb" />
+    <Compile Include="FluentAccess\Labels\LabelQuery.vb" />
+    <Compile Include="FluentAccess\Lists\ListQuery.vb" />
+    <Compile Include="FluentAccess\Members\MemberQuery.vb" />
+    <Compile Include="FluentAccess\Boards\BoardQuery.vb" />
+    <Compile Include="FluentAccess\Labels\LabelRecordHandle.vb" />
+    <Compile Include="FluentAccess\Cards\CardRecordHandle.vb" />
+    <Compile Include="FluentAccess\Lists\ListRecordHandle.vb" />
+    <Compile Include="FluentAccess\Members\MemberRecordHandle.vb" />
+    <Compile Include="FluentAccess\Boards\BoardRecordHandle.vb" />
+    <Compile Include="FluentAccess\Cards\CardStore.vb" />
+    <Compile Include="FluentAccess\Labels\LabelStore.vb" />
+    <Compile Include="FluentAccess\Lists\ListStore.vb" />
+    <Compile Include="FluentAccess\Members\MemberStore.vb" />
+    <Compile Include="FluentAccess\Boards\BoardStore.vb" />
+    <Compile Include="Repositories\%28Extensions%29.vb" />
+    <Compile Include="Models\%28IdContainer%29.vb" />
+    <Compile Include="Models\TrelloBoard.vb" />
+    <Compile Include="Models\TrelloCard.vb" />
+    <Compile Include="Models\TrelloLabel.vb" />
+    <Compile Include="Const\TrelloLabelColors.vb" />
+    <Compile Include="Models\TrelloList.vb" />
+    <Compile Include="Models\TrelloMember.vb" />
+    <Compile Include="Repositories\RepositoryBase.vb" />
+    <Compile Include="TrelloApi.FluentAccess.vb" />
+    <Compile Include="Repositories\TrelloLabelRepository.vb" />
+    <Compile Include="Repositories\TrelloCardRepository.vb" />
+    <Compile Include="Repositories\TrelloListRepository.vb" />
+    <Compile Include="Repositories\TrelloMemberRepository.vb" />
+    <Compile Include="Repositories\TrelloBoardRepository.vb" />
+    <Compile Include="TrelloApi.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

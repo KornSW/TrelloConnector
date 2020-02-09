@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TrelloConnector</id>
+    <version>4.18.0-localbuild</version>
+    <title>TrelloConnector (by KornSW)</title>
+    <authors>KornSW</authors>
+    <owners>KornSW</owners>
+    <!-- https://spdx.org/licenses/ -->
+    <license type="expression">GPL-3.0-only</license>
+    <projectUrl>https://github.com/KornSW/TrelloConnector</projectUrl>
+    <iconUrl>https://github.com/KornSW/TrelloConnector/blob/master/PackageIcon.png?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Yet another connector for the trello REST api which i really intuitive - TRY IT, THEN LOVE IT! And: it is also usable unter IIS (no running messageloop required)</description>
+    <releaseNotes></releaseNotes>
+    <copyright>KornSW</copyright>
+    <tags>Trello connector REST TODO</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="[12.0,13.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#from-a-convention-based-working-directory -->
+    <file src="(Stage)\Bin\KSW.TrelloConnector.dll" target="lib/{tfm}" />
+    <file src="(Stage)\Bin\KSW.TrelloConnector.xml" target="lib/{tfm}" />
+    <file src="(Stage)\Bin\KSW.TrelloConnector.pdb" target="lib/{tfm}" />
+  </files>
+</package>
