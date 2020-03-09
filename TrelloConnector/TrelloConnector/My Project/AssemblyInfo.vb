@@ -25,7 +25,7 @@ Public Module SemanticVersion
   Public Const Minor = "18"
 
   'increment this on internal fix (w/o breaking change):
-  Public Const Fix = "0"
+  Public Const Fix = "1"
 
   'AND DONT FORGET TO UPDATE THE VERSION-INFO OF THE *.nuspec FILE!!!
 #Region "..."
