@@ -13,27 +13,5 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 <Assembly: Guid("e37c0ac5-c34c-4f81-b736-c018787930ee")>
 
-<Assembly: AssemblyVersion(Major + "." + Minor + "." + Fix + "." + BuildNumber)>
-<Assembly: AssemblyInformationalVersion(Major + "." + Minor + "." + Fix + "-" + BuildType)>
-
-Public Module SemanticVersion
-
-  'increment this on breaking change:
-  Public Const Major = "4"
-
-  'increment this on new feature (w/o breaking change):
-  Public Const Minor = "18"
-
-  'increment this on internal fix (w/o breaking change):
-  Public Const Fix = "0"
-
-  'AND DONT FORGET TO UPDATE THE VERSION-INFO OF THE *.nuspec FILE!!!
-#Region "..."
-
-  'dont touch this, beacuse it will be replaced ONLY by the build process!!!
-
-  Public Const BuildNumber = "*"
-  Public Const BuildType = "LOCALBUILD"
-
-#End Region
-End Module
+<Assembly: AssemblyVersion("4.18.1.*")>
+<Assembly: AssemblyInformationalVersion("4.18.1-localbuild")>
