@@ -13,5 +13,5 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 <Assembly: Guid("e37c0ac5-c34c-4f81-b736-c018787930ee")>
 
-<Assembly: AssemblyVersion("4.18.1.*")>
-<Assembly: AssemblyInformationalVersion("4.18.1-localbuild")>
+<Assembly: AssemblyVersion("4.18.2.*")>
+<Assembly: AssemblyInformationalVersion("4.18.2-localbuild")>
