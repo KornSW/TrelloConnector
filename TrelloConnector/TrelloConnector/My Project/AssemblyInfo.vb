@@ -5,6 +5,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("KornSW - Trello Connector")>
 <Assembly: AssemblyDescription("Trello Connector")>
 <Assembly: AssemblyProduct("Trello Connector")>
+
 <Assembly: AssemblyTrademark("KornSW")>
 <Assembly: AssemblyCompany("KornSW")>
 <Assembly: AssemblyCopyright("KornSW")>
@@ -15,3 +16,4 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("4.18.2.*")>
 <Assembly: AssemblyInformationalVersion("4.18.2-localbuild")>
+'DONT ADD: AssemblyFileVersion(...) !!!!!
